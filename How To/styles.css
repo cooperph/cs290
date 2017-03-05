@@ -1,0 +1,73 @@
+@font-face {
+	font-family: lifecraft;
+	src: url(fonts/Lifecraft_Font.ttf);
+	font-weight: medium;
+}
+
+#wow{
+	font-family: lifecraft;	
+}
+
+#header {
+	font-family: lifecraft;
+	text-align: center;
+	font-size:200%;
+}
+#linksBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20;
+    overflow: hidden;
+    background-color: #fff9e6;
+}
+
+#linksBar li {
+    float: left;
+}
+
+#linksBar li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 10px;
+	padding-top: 23px;
+    text-decoration: none;
+    font-size: 200%;
+	font-family: lifecraft;
+}
+
+#linksBar #right {
+	float:right;
+	display: block;
+    padding-right: 50px;
+}
+
+#linksBar #center {
+    display:block;
+    padding 15%;
+}
+
+li a:hover {
+    background-color: #ffedb3;
+}
+
+#mims {
+    align:center;
+}
+
+#introText {
+    width: 80%;
+    margin: auto;
+    border: 1px solid black;
+    
+}
+p {
+    font-family: "Ubuntu Condensed";
+}
+
+.center{
+    margin:auto;
+    width: 40%;
+    padding: 10px;
+}
+    
