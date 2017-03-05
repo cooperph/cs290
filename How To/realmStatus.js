@@ -6,8 +6,8 @@ function bindButtons(){
 document.getElementById('urlSubmit').addEventListener('click', function(event){
   var req = new XMLHttpRequest();
 
-  var payload = {realm:null};
-  payload.realm = document.getElementById('realm').value;
+  //var payload = {realm:null};
+  //payload.realm = document.getElementById('realm').value;
 
   var opening = 'https://us.api.battle.net/wow/realm/status';
   var zip = '?realm=' + document.getElementById('realm').value;
@@ -17,7 +17,7 @@ document.getElementById('urlSubmit').addEventListener('click', function(event){
   req.open('GET', owmURL, false);
   req.setRequestHeader('Content-Type', 'application/json');
 
-  var strObj = JSON.stringify(payload);
+ // var strObj = JSON.stringify(payload);
   req.send(null);
 
   var response = JSON.parse(req.response);
