@@ -8,6 +8,12 @@
 	font-family: lifecraft;	
 }
 
+h3{
+    font-family: "Ubuntu Condensed";
+    font-size: 150%;
+    text-decoration: underline;
+}
+
 #header {
 	font-family: lifecraft;
 	text-align: center;
@@ -58,11 +64,19 @@ li a:hover {
 #introText {
     width: 80%;
     margin: auto;
-    border: 1px solid black;
-    
+    border: 1px solid black; 
 }
+
+#codeText {
+    width: 80%;
+    margin: auto;
+    border: 1px solid black; 
+    background-color: #d1e0e0;
+}
+
 p {
     font-family: "Ubuntu Condensed";
+    font-size: 125%;
 }
 
 .center{
