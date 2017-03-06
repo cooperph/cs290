@@ -13,11 +13,11 @@ document.getElementById('urlSubmit').addEventListener('click', function(event){
 
 //https://us.api.battle.net/wow/character/Sargeras/Maiella?fields=professions&locale=en_US&apikey=a4mttk38ykqdj8ynjw6bzd3hab7sk46s    
   var opening = 'https://us.api.battle.net/wow/character/';
-  var serv = document.getElementById('server') + '/' + document.getElementById('charname');
-  var fields ='?fields=professions&locale=en_US';
+  var serv = document.getElementById('realm').value + '/' + document.getElementById('charname').value;
+  var fields ='?fields=reputation&locale=en_US';
   var apiPart = '&apikey=' + apiKey;
   var owmURL = opening + serv + fields + apiPart;
-
+  
   req.open('GET', owmURL, false);
   req.setRequestHeader('Content-Type', 'application/json');
 
@@ -27,8 +27,40 @@ document.getElementById('urlSubmit').addEventListener('click', function(event){
   var response = JSON.parse(req.response);
 
   document.getElementById('cname').textContent = response.name;
-  document.getElementById('myimage').src = response.thumbnail;
+  document.getElementById('myimage').src = ' https://render-api-us.worldofwarcraft.com/static-render/us/' + response.thumbnail;
+  //document.getElementById('repName').textContent = response.reputation[20].name;
+  //document.getElementById('repStanding').textContent = repName(response.reputation[20].standing);
+  //document.getElementById('repValue').textContent = (response.reputation[20].value / response.reputation[20].max * 100).toFixed(2) +'%';
+  
+  // https://render-api-us.worldofwarcraft.com/static-render/us/sargeras/87/137909847-avatar.jpg
 
   event.preventDefault();
 })
+}
+
+function repName(x){
+	if(x == 0){
+		return 'Hated';
+	}
+	else if(x == 1){
+		return 'Hostile';
+	}
+	else if(x == 2){
+		return 'Unfriendly';
+	}
+	else if(x == 3){
+		return 'Neutral';
+	}
+	else if(x == 4){
+		return 'Friendly';
+	}
+	else if(x == 5){
+		return 'Honored';
+	}
+	else if(x == 6){
+		return 'Revered';
+	}
+	else if(x == 7){
+		return 'Exalted';
+	}
 }

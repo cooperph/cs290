@@ -26,6 +26,65 @@
 		</ul>	
 	</div>
 	<hr>
+	
+	<div id="introText">
+    <h3>Access Character Portrait</h3>
+        <p>In this exercise we will explore how to retrieve a specific characters portrait from the WoW API.</p>
+        <p>To get us started I will show you a working example and we will go into more detail of how to accomplish this below. My buddy Jeeves will help us out on this one. Right now he is the default character, but once you submit a new character, my creation will go away. Why don't you give it a try!</p>
+        <p>I have automatially filled in the form for the character Maiella on the Realm Sargeras. You can look up for any active World of Warcraft character. If you have not logged into this character in a considerable amount of time, it will not return the picture. Here is a list of a few more characters you can try:</p>
+        <table border="1px solid black">
+          <tr>
+            <th>Realm</th>
+            <th>Name</th>
+          </tr>
+          <tr>
+            <td>Hyjal</td>
+            <td>Mooshuhalo</td>
+          </tr>
+          <tr>
+            <td>Sargeras</td>
+            <td>Shokazula</td>
+          </tr>
+          <tr> 
+            <td>Hippieflip</td>
+            <td>Zul'jin</td>
+          </tr>
+        </table>
+        <br>
+<!-- Character picture building -->
+      <div id="introText">
+        <form>
+          <fieldset>
+            <legend>Character Picture</legend>
+            <label for="realm">Realm:</label>
+            <input value="Sargeras" type="text" name="realm" id="realm">
+            <label for="charname">Character:</label>
+            <input value="Maiella" type="text" name="charname" id="charname">
+            <input type="submit" id="urlSubmit">
+          </fieldset>
+        </form>
+          <h2>Character Portrait</h2>
+             <ul>
+              <li><span id="cname">Jeeves</span></li>
+              <li><img src="images/jeeves1.png" id="myimage"></span></li>
+             </ul>
+         <!-- <h3>Reputation</h3>
+              <li><span>Name: </span><span id="repName"></span></li>
+              <li><span>Standing: </span><span id="repStanding"></span></li>
+              <li><span>Value: </span><span id="repValue">%</span></li>
+        -->
+      </div>
+<!-- Content after the character picture -->
+        <p>Lets break this down into steps and learn how to get this working.</p>
+        <h3>Step 1</h3>
+        <p>Build the Form in HTML</p>
+        <p>Just like in the earlier example, we first need to build a form in HTML that we can then use to get our values that we want to look up with Javascript.</p>
+        <img src="images/char1.png">
+        <p>As you can see with the above code we are creating a form that has two seperate text boxes and a submit button. Each of these will have its' own unique name and id property, which will be used by our Javascript to get these values.</p>
+        <h3>Step 2</h3>
+        <p>Submit Button</p>
+        <p></p>
+	</div>
             
 <!-- Navigation Bar at Bottom -->
     <div id="linksBar" class="center">
