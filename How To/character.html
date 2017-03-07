@@ -66,6 +66,7 @@
           <h2>Character Portrait</h2>
              <ul>
               <li><span id="cname">Jeeves</span></li>
+              <li><span>Faction: </span><span id="faction">Neutral</span></li>
               <li><img src="images/jeeves1.png" id="myimage"></span></li>
              </ul>
          <!-- <h3>Reputation</h3>
@@ -106,7 +107,20 @@
         <img src="images/thumbnailChar.png">
         <p>In here we can see all of the returned information. For our character portrait, we care about the 'thumbnail' attribute. All of the other information is wonderful and can be used to build up other information about this character.</p>
         <p>This thumbnail arrtibute is only part of the puzzle. Sadly, here is a place where the API documentation does not hep you. The documentation will not tell you how to use this information. I was able to figure it out by the help of the WoW Develpoment Community. Below is the missing piece to the puzzle.</p>
-        <div id="codeText"><p>https://render-api-us.worldofwarcraft.com/static-render/us/ + thumbnail</p></div>
+        <div id="codeText"><p>'https://render-api-us.worldofwarcraft.com/static-render/us/' + thumbnail</p></div>
+        <p>Now that we have the final piece to the puzzle we can create the link to the character portrait.</p>
+        <h3>Step 4</h3>
+        <p>Extra Functions</p>
+        <p>As you can see in the returned JSON Object, we aren't always given text for our attributes. So, there are times where you will need to create your own Javascript functions to interpret the values from intergers to strings. In the above working example we showed: character name, faction, and portrait. In order to determine the faction we needed to run our result through another function.</p>
+        <img src="images/getFaction2.png"><br>
+        <img src="images/getFaction.png">
+        <p>From the original JSON Object we looked at the attribute for faction. Since I know that the character Maiella from Sargeras is an Alliance player, we can determine that the values of '0' would stand for Alliance and that '1' would be for Horde. This is easily proved by looking up a character that if horde and looking at the value for the faction attribute.</p>
+        <p>As you can see from the code above, we just do a simple function call on the response and we can determine our faction.</p>
+        <br>
+        <p>BLAM! You can now find character portraits for specific characters. This can be quite ueful if you want to automatically upload character pictures for your guild website or forum board.</p>
+        <h3>THANK YOU!</h3>
+        <p>This is the end of my tutorial on how to use the WoW API. I hope that this infomation will help you to create tons of exciting new material. I appreciate you taking the time to work through this and I hope that this will sever as a help to getting started. Until next time, Happy Questing!</p>
+        
         
 	</div>
             

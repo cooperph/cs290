@@ -21,6 +21,7 @@ document.getElementById('urlSubmit').addEventListener('click', function(event){
 
   document.getElementById('cname').textContent = response.name;
   document.getElementById('myimage').src = 'https://render-api-us.worldofwarcraft.com/static-render/us/' + response.thumbnail;
+    document.getElementById('faction').textContent = getFaction(response.faction)
 
   event.preventDefault();
 })
@@ -51,4 +52,13 @@ function repName(x){
 	else if(x == 7){
 		return 'Exalted';
 	}
+}
+
+function getFaction(x){
+    if(x){
+        return 'FOR THE HORDE';
+    }
+    else{
+        return 'For The Alliance!';   
+    }
 }
